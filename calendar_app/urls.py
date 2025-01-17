@@ -12,10 +12,3 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),  # Här kopplar vi in API:et
 ]
-from rest_framework import viewsets
-from .models import Event
-from .serializers import EventSerializer
-
-class EventViewSet(viewsets.ModelViewSet):
-    queryset = Event.objects.all()
-    serializer_class = EventSerializer
