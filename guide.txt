@@ -2,6 +2,68 @@ https://chatgpt.com/g/g-p-6789b6d50ad88191af971dcd299e6b64-calendar-app/c/6789af
 
 
 
+
+
+här är jag:
+ästa steg: Skapa en vy för API:et
+Öppna filen events/views.py och lägg till följande kod:
+
+python
+Copy
+Edit
+from rest_framework import viewsets
+from .models import Event
+from .serializers import EventSerializer
+
+class EventViewSet(viewsets.ModelViewSet):
+    queryset = Event.objects.all()
+    serializer_class = EventSerializer
+Vad gör den här koden?
+
+EventViewSet är en vy som hanterar CRUD-operationer (Create, Read, Update, Delete) för dina kalenderhändelser.
+Den använder EventSerializer för att konvertera data mellan Python-objekt och JSON-format.
+queryset = Event.objects.all() hämtar alla händelser från databasen.
+När detta är klart:
+Låt mig veta så tar vi nästa steg, som är att lägga till API-routing i projektets urls.py! 😊
+
+
+
+
+
+
+You said:
+innnan vi fortsätter kan du sammanfatta allt vi har gjort än så länge så en 9 åring skulle kunna förstå
+ChatGPT said:
+ChatGPT
+Självklart! Här är en enkel sammanfattning av vad vi har gjort hittills:
+
+1. Skapat grunden för vår app
+Vi har byggt en kalenderapp med hjälp av ett program som heter Django (som är som en verktygslåda för att göra hemsidor).
+Vi gjorde först ett projekt som heter calendar_app och inuti det skapade vi en liten del som heter events (för att hantera kalenderhändelser, t.ex. möten eller födelsedagar).
+2. Förberett databasen
+En databas är som en stor anteckningsbok där vi sparar information. Vi förberedde den för att hålla reda på saker som:
+Vilka som använder appen.
+Kalenderhändelser som användare skapar.
+3. Skapat en mall för händelser
+Vi gjorde en modell som berättar för datorn vad varje händelse ska innehålla:
+Vem som skapade den.
+Vad händelsen heter (titel).
+När den börjar och slutar.
+4. Lagt till en översättare
+Vi skapade något som heter en serializer, som fungerar som en översättare mellan vår databas och saker som vi visar på hemsidan. Den gör det möjligt att skicka och ta emot data i ett format som datorn och vi människor förstår.
+5. Förberett för att prata med vår app
+Vi började skapa vyer som låter oss hantera kalenderhändelserna genom ett gränssnitt. Nu kan vi snart lägga till, ändra och ta bort händelser via något som kallas ett API (ett sätt för program att prata med varandra).
+Så just nu har vi byggt grunden för appen och förberett den för att börja jobba med data (händelser). Nästa steg blir att göra det här tillgängligt för oss genom att lägga till en adress på webben som visar våra händelser.
+
+Låt mig veta när du är redo att fortsätta! 😊
+
+
+
+
+
+
+
+
 ### 1. Architectural Overview
 
 **Backend**:
